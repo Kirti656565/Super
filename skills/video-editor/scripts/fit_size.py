@@ -42,11 +42,12 @@ def main():
     # pick a height that suits the bitrate
     src_h = info["video"]["height"] if info["video"] else 1080
     h = a.max_height or src_h
-    if video_kbps < 2500:
+    # only drop resolution when the bitrate is genuinely too low for it (H.264, typical footage)
+    if video_kbps < 1500:
         h = min(h, 720)
-    if video_kbps < 1200:
-        h = min(h, 480)
     if video_kbps < 500:
+        h = min(h, 480)
+    if video_kbps < 250:
         h = min(h, 360)
     vf = f"scale=-2:'min({h},ih)'"
 
