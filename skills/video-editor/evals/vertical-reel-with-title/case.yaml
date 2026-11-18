@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: vertical-reel-with-title
+expected_outcome: |
+  reel.mp4 is a 1080x1920 H.264 MP4 with audio, same length as trip.mp4, showing a readable "Bali 2026" title near the start and fading to black at the end.
+context:
+  scaffold_script: place-files.sh

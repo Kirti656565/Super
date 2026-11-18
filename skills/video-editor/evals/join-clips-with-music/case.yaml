@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: join-clips-with-music
+expected_outcome: |
+  birthday.mp4 contains the three clips in order with crossfades, one consistent resolution, and a continuous audio track mixing the original sound with quieter background music for the whole length.
+context:
+  scaffold_script: place-files.sh

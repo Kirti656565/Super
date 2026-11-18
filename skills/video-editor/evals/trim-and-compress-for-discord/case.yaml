@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: trim-and-compress-for-discord
+expected_outcome: |
+  lecture_clip.mp4 is 20 seconds long (0:05-0:25 of the source), under 2 MB, still has audio, and plays as a normal H.264 MP4.
+context:
+  scaffold_script: place-files.sh
